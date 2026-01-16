@@ -1,5 +1,6 @@
 procedure InitializeComponent;
     begin
+        self.components := new System.ComponentModel.Container();
         var resources: System.ComponentModel.ComponentResourceManager := new System.ComponentModel.ComponentResourceManager(typeof(Form1));
         self.textBox1 := new System.Windows.Forms.TextBox();
         self.label1 := new System.Windows.Forms.Label();
@@ -16,6 +17,14 @@ procedure InitializeComponent;
         self.textBox3 := new System.Windows.Forms.TextBox();
         self.label4 := new System.Windows.Forms.Label();
         self.button5 := new System.Windows.Forms.Button();
+        self.button7 := new System.Windows.Forms.Button();
+        self.toolTip1 := new System.Windows.Forms.ToolTip(self.components);
+        self.button6 := new System.Windows.Forms.Button();
+        self.label5 := new System.Windows.Forms.Label();
+        self.label6 := new System.Windows.Forms.Label();
+        self.button8 := new System.Windows.Forms.Button();
+        self.button9 := new System.Windows.Forms.Button();
+        self.label7 := new System.Windows.Forms.Label();
         self.SuspendLayout();
         // 
         // textBox1
@@ -106,6 +115,7 @@ procedure InitializeComponent;
         self.button4.Size := new System.Drawing.Size(17, 23);
         self.button4.TabIndex := 8;
         self.button4.Text := '?';
+        self.toolTip1.SetToolTip(self.button4, 'More information');
         self.button4.UseVisualStyleBackColor := false;
         self.button4.Click += button4_Click;
         // 
@@ -117,10 +127,11 @@ procedure InitializeComponent;
         self.comboBox1.Name := 'comboBox1';
         self.comboBox1.Size := new System.Drawing.Size(76, 21);
         self.comboBox1.TabIndex := 9;
+        self.toolTip1.SetToolTip(self.comboBox1, 'Select DirectX version');
         // 
         // label3
         // 
-        self.label3.Location := new System.Drawing.Point(508, 9);
+        self.label3.Location := new System.Drawing.Point(184, 5);
         self.label3.Name := 'label3';
         self.label3.Size := new System.Drawing.Size(58, 23);
         self.label3.TabIndex := 10;
@@ -167,13 +178,105 @@ procedure InitializeComponent;
         self.button5.Size := new System.Drawing.Size(17, 23);
         self.button5.TabIndex := 14;
         self.button5.Text := '?';
+        self.toolTip1.SetToolTip(self.button5, 'More information');
         self.button5.UseVisualStyleBackColor := false;
         self.button5.Click += button5_Click;
+        // 
+        // button7
+        // 
+        self.button7.BackgroundImage := (System.Drawing.Image(resources.GetObject('button7.BackgroundImage')));
+        self.button7.BackgroundImageLayout := System.Windows.Forms.ImageLayout.Stretch;
+        self.button7.FlatStyle := System.Windows.Forms.FlatStyle.Flat;
+        self.button7.ForeColor := System.Drawing.SystemColors.Control;
+        self.button7.Location := new System.Drawing.Point(36, 85);
+        self.button7.Name := 'button7';
+        self.button7.Size := new System.Drawing.Size(26, 26);
+        self.button7.TabIndex := 16;
+        self.toolTip1.SetToolTip(self.button7, 'Open game folder');
+        self.button7.UseVisualStyleBackColor := true;
+        self.button7.Click += button7_Click;
+        // 
+        // button6
+        // 
+        self.button6.BackgroundImage := (System.Drawing.Image(resources.GetObject('button6.BackgroundImage')));
+        self.button6.BackgroundImageLayout := System.Windows.Forms.ImageLayout.Stretch;
+        self.button6.FlatStyle := System.Windows.Forms.FlatStyle.Flat;
+        self.button6.ForeColor := System.Drawing.SystemColors.Control;
+        self.button6.Location := new System.Drawing.Point(36, 119);
+        self.button6.Name := 'button6';
+        self.button6.Size := new System.Drawing.Size(26, 26);
+        self.button6.TabIndex := 15;
+        self.toolTip1.SetToolTip(self.button6, 'Change game folder');
+        self.button6.UseVisualStyleBackColor := true;
+        self.button6.Click += button6_Click;
+        // 
+        // label5
+        // 
+        self.label5.Font := new System.Drawing.Font('Microsoft Sans Serif', 8.25, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, (System.Byte(204)));
+        self.label5.Location := new System.Drawing.Point(13, 59);
+        self.label5.Name := 'label5';
+        self.label5.Size := new System.Drawing.Size(79, 23);
+        self.label5.TabIndex := 17;
+        self.label5.Text := 'Game Folder';
+        self.label5.TextAlign := System.Drawing.ContentAlignment.MiddleCenter;
+        // 
+        // label6
+        // 
+        self.label6.Font := new System.Drawing.Font('Microsoft Sans Serif', 8.25, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, (System.Byte(204)));
+        self.label6.Location := new System.Drawing.Point(476, 62);
+        self.label6.Name := 'label6';
+        self.label6.Size := new System.Drawing.Size(101, 23);
+        self.label6.TabIndex := 18;
+        self.label6.Text := 'Server Folder';
+        self.label6.TextAlign := System.Drawing.ContentAlignment.MiddleCenter;
+        // 
+        // button8
+        // 
+        self.button8.BackgroundImage := (System.Drawing.Image(resources.GetObject('button8.BackgroundImage')));
+        self.button8.BackgroundImageLayout := System.Windows.Forms.ImageLayout.Stretch;
+        self.button8.FlatStyle := System.Windows.Forms.FlatStyle.Flat;
+        self.button8.ForeColor := System.Drawing.SystemColors.Control;
+        self.button8.Location := new System.Drawing.Point(512, 88);
+        self.button8.Name := 'button8';
+        self.button8.Size := new System.Drawing.Size(26, 26);
+        self.button8.TabIndex := 20;
+        self.toolTip1.SetToolTip(self.button8, 'Open server folder');
+        self.button8.UseVisualStyleBackColor := true;
+        self.button8.Click += button8_Click;
+        // 
+        // button9
+        // 
+        self.button9.BackgroundImage := (System.Drawing.Image(resources.GetObject('button9.BackgroundImage')));
+        self.button9.BackgroundImageLayout := System.Windows.Forms.ImageLayout.Stretch;
+        self.button9.FlatStyle := System.Windows.Forms.FlatStyle.Flat;
+        self.button9.ForeColor := System.Drawing.SystemColors.Control;
+        self.button9.Location := new System.Drawing.Point(512, 122);
+        self.button9.Name := 'button9';
+        self.button9.Size := new System.Drawing.Size(26, 26);
+        self.button9.TabIndex := 19;
+        self.toolTip1.SetToolTip(self.button9, 'Change server folder');
+        self.button9.UseVisualStyleBackColor := true;
+        self.button9.Click += button9_Click;
+        // 
+        // label7
+        // 
+        self.label7.Location := new System.Drawing.Point(336, 5);
+        self.label7.Name := 'label7';
+        self.label7.Size := new System.Drawing.Size(58, 23);
+        self.label7.TabIndex := 21;
+        self.label7.Visible := false;
         // 
         // Form1
         // 
         self.ClientSize := new System.Drawing.Size(578, 231);
         self.ControlBox := false;
+        self.Controls.Add(self.label7);
+        self.Controls.Add(self.button8);
+        self.Controls.Add(self.button9);
+        self.Controls.Add(self.label6);
+        self.Controls.Add(self.label5);
+        self.Controls.Add(self.button7);
+        self.Controls.Add(self.button6);
         self.Controls.Add(self.button5);
         self.Controls.Add(self.label4);
         self.Controls.Add(self.textBox3);
@@ -193,7 +296,7 @@ procedure InitializeComponent;
         self.Icon := (System.Drawing.Icon(resources.GetObject('$this.Icon')));
         self.Name := 'Form1';
         self.StartPosition := System.Windows.Forms.FormStartPosition.CenterScreen;
-        self.Text := 'Witcher 3: Online Launcher v1.1';
+        self.Text := 'Witcher 3: Online Launcher';
         self.ResumeLayout(false);
         self.PerformLayout();
     end;
